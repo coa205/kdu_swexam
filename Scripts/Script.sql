@@ -1,0 +1,21 @@
+CREATE USER 'user_ncs'@'%' ;
+UPDATE mysql.user SET Password=PASSWORD('rootroot') WHERE User='user_ncs' AND Host='%' ;
+GRANT Alter ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Create ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Create view ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Delete ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Drop ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Grant option ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Index ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Insert ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT References ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Select ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Show view ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Trigger ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Update ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Create routine ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Alter routine ON ncs_erp.* TO 'user_ncs'@'%' ;
+GRANT Execute ON ncs_erp.* TO 'user_ncs'@'%' ;
+FLUSH PRIVILEGES ;
+
+DROP USER 'user_ncs'@'%' ;
