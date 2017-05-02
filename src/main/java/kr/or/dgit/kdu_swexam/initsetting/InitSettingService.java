@@ -82,11 +82,11 @@ public class InitSettingService {
 			dao.getUpdateResult("drop database if exists " + Config.DB_NAME);
 			dao.getUpdateResult("create database if not exists " +  Config.DB_NAME);
 			dao.getUpdateResult("use " + Config.DB_NAME);
-			try{
+			try{// 계정이 만들어 진 상태에서 다시 만들려고 시도를 하는 예외를 처리
 				for(int i=0 ; i<Config.CREATE_USER.length ; i++){
 					dao.getUpdateResult(Config.CREATE_USER[i]);
 				}
-			}catch(SQLException e){
+			}catch(SQLException e){// 계정이 이미 있다면 다시 계정을 지우고 새로 만든다.
 				dao.getUpdateResult(Config.DELETE_USER);
 				for(int i=0 ; i<Config.CREATE_USER.length ; i++){
 					dao.getUpdateResult(Config.CREATE_USER[i]);
