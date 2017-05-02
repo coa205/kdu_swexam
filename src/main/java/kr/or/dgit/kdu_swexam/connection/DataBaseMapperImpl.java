@@ -18,26 +18,32 @@ public class DataBaseMapperImpl implements DataBaseMapper {
 	}
 	
 	@Override
-	public int DBExists(Map<String, Object> param) {
-		log.debug("DBExists()");
-		return sqlsession.selectOne(namespace +"DBExists", param);
+	public int dBExists(Map<String, Object> param) {
+		log.debug("dBExists()");
+		return sqlsession.selectOne(namespace +"dBExists", param);
+	}
+	
+	@Override
+	public int userExists(Map<String, Object> param) {
+		log.debug("userExists()");
+		return sqlsession.selectOne(namespace +"userExists", param);
 	}
 
 	@Override
-	public int EmployeeTableExists(Map<String, Object> param) {
-		log.debug("EmployeeTableExists()");
-		return sqlsession.selectOne(namespace +"EmployeeTableExists", param);
+	public int employeeTableExists(Map<String, Object> param) {
+		log.debug("employeeTableExists()");
+		return sqlsession.selectOne(namespace +"employeeTableExists", param);
 	}
 
 	@Override
-	public int DepartmentTableExists(Map<String, Object> param) {
-		log.debug("DepartmentTableExists()");
-		return sqlsession.selectOne(namespace +"DepartmentTableExists", param);
+	public int departmentTableExists(Map<String, Object> param) {
+		log.debug("departmentTableExists()");
+		return sqlsession.selectOne(namespace +"departmentTableExists", param);
 	}
 
 	@Override
-	public int TitleTableExists(Map<String, Object> param) {
-		log.debug("TitleTableExists()");
-		return sqlsession.selectOne(namespace +"TitleTableExists", param);
+	public int titleTableExists(Map<String, Object> param) {
+		log.debug("titleTableExists()");
+		return sqlsession.selectOne(namespace +"titleTableExists", param);
 	}
 }

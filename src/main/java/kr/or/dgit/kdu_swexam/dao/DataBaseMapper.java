@@ -3,8 +3,9 @@ package kr.or.dgit.kdu_swexam.dao;
 import java.util.Map;
 
 public interface DataBaseMapper {
-	int DBExists(Map<String, Object> param);
-	int EmployeeTableExists(Map<String, Object> param);
-	int DepartmentTableExists(Map<String, Object> param);
-	int TitleTableExists(Map<String, Object> param);
+	int dBExists(Map<String, Object> param);
+	int userExists(Map<String, Object> param);
+	int employeeTableExists(Map<String, Object> param);
+	int departmentTableExists(Map<String, Object> param);
+	int titleTableExists(Map<String, Object> param);
 }

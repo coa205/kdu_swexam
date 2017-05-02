@@ -41,37 +41,46 @@ public class MainDataBaseTest {
 		Map<String, Object> param = new HashMap<String, Object>();
 		param.put("param1", "ncs_erp");
 		
-		int res = dataBaseService.DBExists(param);
+		int res = dataBaseService.dBExists(param);
 		Assert.assertNotNull(res);
 	}
 	
 	@Test
-	public void cTestDBEmployeeTableExists() {
+	public void cTestUserExists() {
+		Map<String, Object> param = new HashMap<String, Object>();
+		param.put("param1", "user_ncs");
+		
+		int res = dataBaseService.userExists(param);
+		Assert.assertNotNull(res);
+	}
+	
+	@Test
+	public void dTestEmployeeTableExists() {
 		Map<String, Object> param = new HashMap<String, Object>();
 		param.put("param1", "ncs_erp");
 		param.put("param2", "employee");
 		
-		int res = dataBaseService.EmployeeTableExists(param);
+		int res = dataBaseService.employeeTableExists(param);
 		Assert.assertNotNull(res);
 	}
 	
 	@Test
-	public void dTestDepartmentTableExists() {
+	public void eTestDepartmentTableExists() {
 		Map<String, Object> param = new HashMap<String, Object>();
 		param.put("param1", "ncs_erp");
 		param.put("param2", "department");
 		
-		int res = dataBaseService.DepartmentTableExists(param);
+		int res = dataBaseService.departmentTableExists(param);
 		Assert.assertNotNull(res);
 	}
 	
 	@Test
-	public void eTestTitleTableExists() {
+	public void fTestTitleTableExists() {
 		Map<String, Object> param = new HashMap<String, Object>();
 		param.put("param1", "ncs_erp");
 		param.put("param2", "title");
 		
-		int res = dataBaseService.TitleTableExists(param);
+		int res = dataBaseService.titleTableExists(param);
 		Assert.assertNotNull(res);
 	}
 }

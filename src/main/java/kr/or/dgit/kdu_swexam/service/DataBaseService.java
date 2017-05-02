@@ -9,31 +9,38 @@ import kr.or.dgit.kdu_swexam.util.MybatisSqlSessionFactory;
 
 public class DataBaseService {
 	
-	public int DBExists(Map<String, Object> param){
+	public int dBExists(Map<String, Object> param){
 		try(SqlSession sqlsession = MybatisSqlSessionFactory.openSession()){
 			DataBaseMapperImpl comp = new DataBaseMapperImpl(sqlsession);
-			return comp.DBExists(param);
+			return comp.dBExists(param);
 		}
 	}
 	
-	public int EmployeeTableExists(Map<String, Object> param){
+	public int userExists(Map<String, Object> param){
 		try(SqlSession sqlsession = MybatisSqlSessionFactory.openSession()){
 			DataBaseMapperImpl comp = new DataBaseMapperImpl(sqlsession);
-			return comp.EmployeeTableExists(param);
+			return comp.userExists(param);
 		}
 	}
 	
-	public int DepartmentTableExists(Map<String, Object> param){
+	public int employeeTableExists(Map<String, Object> param){
 		try(SqlSession sqlsession = MybatisSqlSessionFactory.openSession()){
 			DataBaseMapperImpl comp = new DataBaseMapperImpl(sqlsession);
-			return comp.DepartmentTableExists(param);
+			return comp.employeeTableExists(param);
 		}
 	}
 	
-	public int TitleTableExists(Map<String, Object> param){
+	public int departmentTableExists(Map<String, Object> param){
 		try(SqlSession sqlsession = MybatisSqlSessionFactory.openSession()){
 			DataBaseMapperImpl comp = new DataBaseMapperImpl(sqlsession);
-			return comp.TitleTableExists(param);
+			return comp.departmentTableExists(param);
+		}
+	}
+	
+	public int titleTableExists(Map<String, Object> param){
+		try(SqlSession sqlsession = MybatisSqlSessionFactory.openSession()){
+			DataBaseMapperImpl comp = new DataBaseMapperImpl(sqlsession);
+			return comp.titleTableExists(param);
 		}
 	}
 }

@@ -33,7 +33,7 @@ public class InitSettingService {
 				try(BufferedReader reader = new BufferedReader(new FileReader(dtFiles[0]))){
 				initSet();
 					for(int i=0 ; i<Config.TABLE_NAME.length ; i++){
-						loadTableData(i); // BackupFiles폴더에 있는 파일들을 가져와 테이블에 삽입	
+						loadTableData(i); // BackupFiles폴더에 있는 파일들을 가져와 테이블에 삽입
 					}
 					System.out.println();
 					JOptionPane.showMessageDialog(null, "데이터 복원 완료");
@@ -113,7 +113,7 @@ public class InitSettingService {
 	
 	public void BackupTableData(int tables){// 파일 백업
 		String sql = "select * from "+Config.TABLE_NAME[tables];
-		Connection con = DBCon.getConnection(Config.URL+Config.DB_NAME,Config.USER,Config.PWD );
+		Connection con = DBCon.getConnection(Config.URL+Config.DB_NAME,Config.USER,Config.PWD);
 		try(PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery();){
 			StringBuilder sb = new StringBuilder();
 			int colCnt = rs.getMetaData().getColumnCount();
@@ -146,7 +146,7 @@ public class InitSettingService {
 		}
 	}
 	
-	protected void executeImportData(String sql, String tableName) {
+	protected void executeImportData(String sql, String tableName){
 		Statement stmt = null;
 		try {
 			Connection con = DBCon.getConnection(Config.URL+Config.DB_NAME,Config.USER,Config.PWD);
