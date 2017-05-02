@@ -30,10 +30,10 @@ drop table employee;
 drop table title;
 drop table department;
 
-SELECT count(*) as isExists FROM INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'ncs_erp';
-SELECT count(*) as isExists FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'department';
-SELECT count(*) as isExists FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'employee';
-SELECT count(*) as isExists FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'title';
+SELECT 1 FROM INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'ncs_erp';
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'department';
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'employee';
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME = 'title';
 
 
 
